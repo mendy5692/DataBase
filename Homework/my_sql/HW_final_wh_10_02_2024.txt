@@ -1,0 +1,74 @@
+CREATE TABLE Platoon (
+    category varchar(255) PRIMARY KEY,
+    size int    
+);
+--------------------------------
+INSERT INTO Platoon
+VALUES
+('photo', 1),
+('art', 2),
+('philosophy', 3);
+--------------------------------
+CREATE TABLE Book (
+    Name varchar(255),
+    category varchar(255),
+    Copies int,
+    FOREIGN KEY (category) REFERENCES Platoon(category),
+    PRIMARY KEY (Name)
+);
+--------------------------------
+INSERT INTO Book
+VALUES
+('aaa', 'photo', 1),
+('bbb', 'art', 2),
+('ccc', 'philosophy', 3),
+('ddd', 'photo', 4),
+('eee', 'art', 5),
+('fff', 'philosophy', 6),
+('ggg', 'photo', 7),
+('hhh', 'philosophy', 8);
+------------------------------------
+CREATE TABLE client (
+  	ID int PRIMARY KEY,
+    Name varchar(255),
+    age int   
+);
+-----------------------------------
+INSERT INTO client
+VALUES
+(1, 'aaa', 11),
+(2, 'bbb', 22),
+(3, 'ccc', 33),
+(4, 'ddd', 44),
+(5, 'eee', 55);
+--------------------------
+CREATE TABLE transactions_table (
+    CustomerID int,
+    Product_Name varchar(255),
+    PurchaseID int PRIMARY KEY,
+    FOREIGN KEY (Product_Name) REFERENCES Book(Name),
+    FOREIGN KEY (CustomerID) REFERENCES Client(ID)
+);
+--------------------------
+INSERT INTO transactions_table
+VALUES
+(4, 'ggg', 88888),
+(3, 'fff', 77777),
+(2, 'eee', 66666),
+(5, 'ddd', 55555),
+(4, 'ccc', 44444),
+(3, 'bbb', 33333),
+(2, 'aaa', 22222),
+(1, 'eee', 11111);
+----------------------------
+SELECT Transactions_table.CustomerID, Client.age
+FROM Transactions_table
+INNER JOIN Client ON Transactions_table.CustomerID=Client.ID;
+--------------------------
+SELECT Book.Name, Client.age
+FROM Book
+INNER JOIN Client ON Book.Name=Client.Name;
+---------------------------
+SELECT Book.category, Client.ID
+FROM Book
+INNER JOIN Client ON Book.Name=Client.Name;

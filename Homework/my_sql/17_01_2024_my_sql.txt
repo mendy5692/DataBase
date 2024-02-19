@@ -1,0 +1,51 @@
+select first_name, age
+FROM Customers
+WHERE customer_id BETWEEN 1 AND 4
+
+select first_name, age
+FROM Customers
+WHERE first_name like 'j%'
+
+select first_name, country
+FROM Customers
+WHERE last_name in ('Luna')
+
+-------------------------------
+
+INSERT INTO  Customers (customer_id, first_name, last_name, age, country)
+VALUES (6, 'Mendy', 'Mendelson', 21, 'IL');
+
+INSERT INTO  Customers (customer_id, first_name, country)
+VALUES (7, 'yossi', 'IL');
+
+INSERT INTO  Customers (customer_id, first_name, last_name, age, country)
+VALUES
+(8, 'Moshy', 'Marom', 32, 'USA'),
+(9, 'Shlomi', 'Polak', 24, 'UK'),
+(10, 'Slan', 'Mosk', 32, 'IL');
+
+--------------------------------
+
+DELETE FROM Customers WHERE customer_id = 1
+
+DELETE FROM Customers WHERE first_name = 'David'
+
+DELETE FROM Customers WHERE last_name = 'Luna' and customer_id = 2
+
+---------------------------------
+
+UPDATE Customers
+SET age = 30
+WHERE first_name ='John';
+
+UPDATE Customers
+SET last_name = 'olivia'
+WHERE customer_id = 5 and age = 28;
+
+UPDATE Customers
+SET first_name = 'mmm', last_name = 'mmm'
+WHERE customer_id = 6;
+
+--------------------------------
+
+

@@ -1,0 +1,94 @@
+db.collection_insert.insert([
+    
+{     
+    Name: "A Contested Art",
+    Publishing: "University of Oklahoma Press",
+    Author: "Stephanie Lewthwaite",
+    Year: 2015,
+    Copies: 3,
+    Line: 12,
+    shelf: 507       
+},
+{
+    Name: "Leo Strauss",
+    Publishing: "SUNY Pres",
+    Author: "Jeffrey A. Bernstein",
+    Year: 2015,
+    Copies: 2,
+    Line: 27,
+    shelf: 978
+},
+{
+    Name: "Photography of Victorian Scotland",
+    Publishing: "Edinburgh University Press",
+    Author: "Roddy Simpson",
+    Year: 2012,
+    Copies: 5,
+    Line: 17,
+    shelf: 763
+},
+{
+    model: "Toyota Prius",
+    cost_of_rent_per_day: 180,
+    Year_of_manufacture: 2010,
+    Date_of_hire: "15/08/2023",
+    Rental_time: "10:25"
+},
+{
+    model: "Honda Civic",
+    cost_of_rent_per_day: 170,
+    Year_of_manufacture: 2009,
+    Date_of_hire: "27/08/2023",
+    Rental_time: "12:40"
+},
+{
+    model: "Hyundai Tucson",
+    cost_of_rent_per_day: 210,
+    Year_of_manufacture: 2014,
+    Date_of_hire: "03/09/2023",
+    Rental_time: "16:55"
+},
+{
+    ID: 1234,
+    Name: "Roni",
+    Email: "Roni@gmail.com",
+    Number: 0511111111,
+    Average: 85
+},
+{
+    ID: 5678,
+    Name: "Mendy",
+    Email: "Mndy@gmail.com",
+    Number: 0522222222,
+    Average: 75
+},
+{
+    ID: 9090,
+    Name: "Yoram",
+    Email: "Yoram@gmail.com",
+    Number: 0533333333,
+    Average: 65
+},
+{
+    Name: "Sugar",
+    Price: 7,
+    Amount: 100,
+    Year_of_Production: 2023,
+    Expiry_Date: "12/03/2024"
+},
+{
+    Name: "Water",
+    Price: 3,
+    Amount: 200,
+    Year_of_Production: 2022,
+    Expiry_Date: "19/11/2028"
+},
+{
+    Name: "flour",
+    Price: 5,
+    Amount: 150,
+    Year_of_Production: 2023,
+    Expiry_Date: "24/03/2024"
+}
+
+])
